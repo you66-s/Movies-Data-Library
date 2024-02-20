@@ -34,7 +34,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         Movies movies = movies_list.get(position);
         holder.title.setText(movies.getTitle());
         holder.description.setText(movies.getDescription());
-        holder.rating.setText((int) movies.getRating());
+        holder.rating.setText(movies.getRating());
     }
 
     @Override

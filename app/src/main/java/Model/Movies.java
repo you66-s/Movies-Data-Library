@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Movies {
     private String title, description;
-    private double rating;
+    private String rating;
     private ArrayList<Movies> movies_list;
 
-    public Movies(String title, String description, double rating) {
+    public Movies(String title, String description, String rating) {
         this.title = title;
         this.description = description;
         this.rating = rating;
@@ -29,11 +29,11 @@ public class Movies {
         this.description = description;
     }
 
-    public double getRating() {
-        return rating;
+    public String getRating() {
+        return this.rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 }

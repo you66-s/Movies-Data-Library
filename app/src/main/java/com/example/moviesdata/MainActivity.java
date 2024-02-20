@@ -14,8 +14,9 @@ import Model.Movies;
 
 public class MainActivity extends AppCompatActivity {
     private ArrayList<Movies> movies_arrayList = new ArrayList<>();
+    private String[] movieTitle, movieDescription, rating;
     private RecyclerView recyclerView;
-    private MovieAdapter movieAdapter;
+    private RecyclerView.Adapter movieAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +27,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         movieAdapter = new MovieAdapter(movies_arrayList);
         recyclerView.setAdapter(movieAdapter);
+        movieTitle = getResources().getStringArray(R.array.movieTitle);
+        movieDescription = getResources().getStringArray(R.array.movieDescription);
+        rating = getResources().getStringArray(R.array.movieRating);
+
+        for (int i = 0; i <getResources().getStringArray(R.array.movieTitle).length; i++) {
+            Movies movies = new Movies(movieTitle[i], movieDescription[i], rating[i]);
+            movies_arrayList.add(movies);
+            movieAdapter.notifyDataSetChanged();
+        }
     }
 }

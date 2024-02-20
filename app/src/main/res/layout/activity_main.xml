@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Film List"
+        android:text="Movie List"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -27,6 +27,7 @@
         android:layout_height="651dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
+        android:foregroundGravity="clip_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.moviesdata"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.moviesdata"
