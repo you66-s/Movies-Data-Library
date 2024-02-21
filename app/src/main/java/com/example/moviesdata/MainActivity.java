@@ -15,6 +15,7 @@ import Model.Movies;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<Movies> movies_arrayList = new ArrayList<>();
     private String[] movieTitle, movieDescription, rating;
+    private final int[] images = {R.drawable.interstellar, R.drawable.the_dark_knight, R.drawable.the_matrix, R.drawable.lord_of_rings, R.drawable.fight_club, R.drawable.inception};
     private RecyclerView recyclerView;
     private RecyclerView.Adapter movieAdapter;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         rating = getResources().getStringArray(R.array.movieRating);
 
         for (int i = 0; i <getResources().getStringArray(R.array.movieTitle).length; i++) {
-            Movies movies = new Movies(movieTitle[i], movieDescription[i], rating[i]);
+            Movies movies = new Movies(movieTitle[i], movieDescription[i], rating[i], images[i]);
             movies_arrayList.add(movies);
             movieAdapter.notifyDataSetChanged();
         }
